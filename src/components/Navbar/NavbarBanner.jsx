@@ -5,7 +5,12 @@ const NavbarBanner = () => {
   const [isOpen, setIsOpen] = useState(true);
   return (
     isOpen && (
-      <motion.div className="bg-primary text-sm text-center font-semibold p-1 hidden lg:block relative">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.7 }}
+        className="bg-primary text-sm text-center font-semibold p-1 hidden lg:block relative"
+      >
         Are you a university or school student for an online tutoring
         partnership?
         <a href="#" className="text-secondary ml-2">
